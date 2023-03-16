@@ -1,0 +1,22 @@
+START
+
+DECLARE "isHasAccount" equal with true
+
+IF "isHasAccount" equal with true
+    PRINT "Log In"
+ELSE 
+    PRINT "Sign In"
+
+DECLARE "inputTask" with "selesai"
+DECLARE "tasks"
+
+WHILE inputTask != "selesai":
+    PRINT "Masukkan tugas (ketik 'selesai' untuk keluar): "
+    INPUT inputTask
+    IF inputTask != "selesai":
+        tasks.ADD(inputTask)
+
+FOR task IN tasks:
+    PRINT task
+
+END
